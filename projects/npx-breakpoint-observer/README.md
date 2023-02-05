@@ -1,24 +1,22 @@
-# NpxBreakpointObserver
+# npx-breakpoint-observer
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.0.
+## How to use it:
 
-## Code scaffolding
+```typescript
+@Component({
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.scss"],
+})
+export class AppComponent implements OnInit {
+  isMobile$: Observable<boolean>;
 
-Run `ng generate component component-name --project npx-breakpoint-observer` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project npx-breakpoint-observer`.
-> Note: Don't forget to add `--project npx-breakpoint-observer` or else it will be added to the default project in your `angular.json` file. 
+  constructor(
+    private readonly _breakpointService: NpxBreakpointObserverService
+  ) {}
 
-## Build
-
-Run `ng build npx-breakpoint-observer` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Publishing
-
-After building your library with `ng build npx-breakpoint-observer`, go to the dist folder `cd dist/npx-breakpoint-observer` and run `npm publish`.
-
-## Running unit tests
-
-Run `ng test npx-breakpoint-observer` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+  ngOnInit(): void {
+    this.isMobile$ = this._breakpointService.isMobile();
+  }
+}
+```

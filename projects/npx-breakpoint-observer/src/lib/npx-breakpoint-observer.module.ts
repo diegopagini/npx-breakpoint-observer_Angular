@@ -1,16 +1,8 @@
 import { NgModule } from '@angular/core';
-import { NpxBreakpointObserverComponent } from './npx-breakpoint-observer.component';
-
-
 
 @NgModule({
-  declarations: [
-    NpxBreakpointObserverComponent
-  ],
-  imports: [
-  ],
-  exports: [
-    NpxBreakpointObserverComponent
-  ]
+  declarations: [],
+  imports: [],
+  exports: [],
 })
-export class NpxBreakpointObserverModule { }
+export class NpxBreakpointObserverModule {}

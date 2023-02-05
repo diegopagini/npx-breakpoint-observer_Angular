@@ -1,6 +1,22 @@
 {
   "name": "npx-breakpoint-observer",
-  "version": "0.0.1",
+  "version": "0.1.1",
+  "keywords": [
+    "angular",
+    "breakpoint",
+    "observer",
+    "obsevables",
+    "mobile",
+    "desktop",
+    "npm-package",
+    "library"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "Diego Pagini",
+    "email": "diegopaginidev@gmail.com",
+    "url": "https://github.com/diegopagini"
+  },
   "peerDependencies": {
     "@angular/common": "^15.1.0",
     "@angular/core": "^15.1.0"
